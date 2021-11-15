@@ -68,6 +68,7 @@ function createElementProper(incomingJSON) {
 
   let newLink = document.createElement("A");
   newLink.href = incomingJSON['url'];
+  newLink.target = "_blank";
   newSite.appendChild(newLink);
 
   let newTitle = document.createElement("H2");
