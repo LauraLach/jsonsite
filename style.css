@@ -35,6 +35,9 @@ img {
   margin: 0px auto;
   object-fit: cover;
 }
+a {
+  text-decoration: none;
+}
 .websites {
   display: flex;
   flex-direction: column;

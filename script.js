@@ -57,7 +57,7 @@ for(let i = 0; i < database.length; i++) {
 }
 
 function createElementMessy(incomingJSON) {
-  let incompleteHTML = "<div class=\"websites\" style=\"background-color: " + incomingJSON['background_color'] + "\"> <a href=\"" + incomingJSON['url'] + "\" target=\"_blank\"> <h2 class=\"siteTitle\"" + incomingJSON['title'] + "</h2></a>" + "<img src=\"" + incomingJSON['image'] + "\"> <h4>" + incomingJSON['description'] + "</h4></div>";
+  let incompleteHTML = "<div class=\"websites\" style=\"background-color: " + incomingJSON['background_color'] + "\"> <a href=\"" + incomingJSON['url'] + "\"  target=\"_blank\"> <h2>" + incomingJSON['title'] + "</h2></a>" + "<img src=\"" + incomingJSON['image'] + "\"> <h4>" + incomingJSON['description'] + "</h4></div>";
 }
 
 function createElementProper(incomingJSON) {
@@ -67,12 +67,12 @@ function createElementProper(incomingJSON) {
   newSite.classList.add('websites');
 
   let newLink = document.createElement("A");
-  newLink.a = incomingJSON['url'];
+  newLink.href = incomingJSON['url'];
   newSite.appendChild(newLink);
 
   let newTitle = document.createElement("H2");
   newTitle.innerText = incomingJSON['title'];
-  newSite.appendChild(newTitle);
+  newLink.appendChild(newTitle);
 
   let newImage = document.createElement("IMG");
   newSite.appendChild(newImage);
