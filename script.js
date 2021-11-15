@@ -1,3 +1,9 @@
+AOS.init();
+
+AOS.init({
+  duration: 900, // values from 0 to 3000, with step 50ms
+});
+
 let websitesLayout = document.getElementById('websitesLayout')
 
 let database = [
@@ -57,7 +63,7 @@ for(let i = 0; i < database.length; i++) {
 }
 
 function createElementMessy(incomingJSON) {
-  let incompleteHTML = "<div class=\"websites\" style=\"background-color: " + incomingJSON['background_color'] + "\"> <a href=\"" + incomingJSON['url'] + "\"  target=\"_blank\"> <h2>" + incomingJSON['title'] + "</h2></a>" + "<img src=\"" + incomingJSON['image'] + "\"> <h4>" + incomingJSON['description'] + "</h4></div>";
+  let allHTML = "<div class=\"websites\" style=\"background-color: " + incomingJSON['background_color'] + "\"> <a href=\"" + incomingJSON['url'] + "\"  target=\"_blank\"> <h2>" + incomingJSON['title'] + "</h2></a>" + "<img src=\"" + incomingJSON['image'] + "\"> <h4>" + incomingJSON['description'] + "</h4></div>";
 }
 
 function createElementProper(incomingJSON) {
